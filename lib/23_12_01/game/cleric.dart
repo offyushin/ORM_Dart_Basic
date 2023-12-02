@@ -60,7 +60,7 @@ class Cleric {
 }
 
 void main(){
-  final arthur1 = Cleric('아서스1', hp: 40, mp: 5);
+  final arthur1 = Cleric('아서스1', hp: 40, mp: 10);
   final arthur2 = Cleric('아서스2', hp: 35);
   final arthur3 = Cleric('아서스3');
   // final arthur4 = Cleric();
