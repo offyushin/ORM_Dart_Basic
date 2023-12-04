@@ -2,9 +2,7 @@ class Person {
   String name;
   int age;
 
-  Person({
-    required this.name,
-    required this.age});
+  Person({required this.name, required this.age});
 
   String str() {
     return '$name의 나이는 $age살';
@@ -17,9 +15,7 @@ void main() {
     Person(name: '한석봉', age: 25),
   ];
 
-  for (Person person in persons) {
-    print(person.str());
-  }
-
-
-}
+  persons.forEach((Person) {
+    print(Person.str());
+  });
+      }
