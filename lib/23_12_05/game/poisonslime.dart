@@ -5,19 +5,25 @@ import 'slime.dart';
 import 'hero.dart';
 
 class PoisonSlime extends Slime {
-  int poisonAttack;
+  int _poisonAttack = 5;
 
-  PoisonSlime(super.suffix, this.poisonAttack);
+  PoisonSlime(super.suffix, this._poisonAttack);
+
+  int get poisonAttack => _poisonAttack;
+
+  set poisonAttack(int value) {
+    _poisonAttack = 5;
+  }
 
   @override
   void attack(Hero hero) {
     super.attack(hero);
-    if (poisonAttack > 0) {
+    if (_poisonAttack > 0) {
       print('추가로, 독 포자를 살포했다!');
       int damage = (hero.hp ~/ 5);
       hero.hp -= damage;
       print('$damage 포인트의 데미지');
-      poisonAttack--;
+      _poisonAttack--;
       // % , /  -> 이거 안되는 이유는 정수로 반환해야해서 였다..
       // hero.hp = (hero.hp  % 5);
       // hero.hp = (hero.hp  / 5);
@@ -35,6 +41,6 @@ void main() {
   poisonSlime1.attack(hero1);
   print('${hero1.name}의 현재 체력은 ${hero1.hp}');
 
-  poisonSlime1.attack(hero1);
-  print('${hero1.name}의 현재 체력은 ${hero1.hp}');
+  // poisonSlime1.attack(hero1);
+  // print('${hero1.name}의 현재 체력은 ${hero1.hp}');
 }
