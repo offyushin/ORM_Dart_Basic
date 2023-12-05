@@ -10,10 +10,10 @@ void main() {
   print("constValue: $constValue");
 
   // final 변수 재할당 (오류)
-  finalValue = 10;
+  //finalValue = 10;
 
   // const 변수 재할당 (오류)
-  constValue = 10;
+ // constValue = 10;
 
   // final 변수 변경
   final int finalNewValue = finalValue + 5;
