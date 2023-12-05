@@ -1,12 +1,19 @@
+abstract class Asset {
+
+}
+// 가
 abstract interface class Thing {
   double get weight;
   set weight(double value);
 }
-
-abstract class Asset {
+// 나
+abstract class IntangibleAsset extends Asset {
 
 }
+// 다
+abstract class Patent extends IntangibleAsset {
 
+}
 abstract class TangibleAsset extends Asset implements Thing {
   @override
   late double weight;
