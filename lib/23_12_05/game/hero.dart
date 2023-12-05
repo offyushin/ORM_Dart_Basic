@@ -18,8 +18,8 @@ class Hero {
   Sword? sword;
 
   Hero({
-    this.name = '홍길동',
-    this.hp = 100,
+    required this.name,
+    required this.hp,
     this.sword,
   });
 
