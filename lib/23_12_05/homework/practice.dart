@@ -15,16 +15,22 @@ abstract class Patent extends IntangibleAsset {
 
 }
 abstract class TangibleAsset extends Asset implements Thing {
+  String name;
+  int price;
+  String color;
+
   @override
   late double weight;
 
+  TangibleAsset({
+  required this.name,
+  required this.price,
+  required this.color,
+  });
 }
 
 
 class Book extends TangibleAsset {
-  String name;
-  int price;
-  String color;
   String isbn;
 
   @override
@@ -39,18 +45,15 @@ class Book extends TangibleAsset {
   }
 
   Book({
-    required this.name,
-    required this.price,
-    required this.color,
+    required super.name,
+    required super.price,
+    required super.color,
     required this.isbn,
     required double weight,
   }) : _weight = weight;
 }
 
  class Computer extends TangibleAsset {
-   String name;
-   int price;
-   String color;
    String makerName;
 
    @override
@@ -65,9 +68,9 @@ class Book extends TangibleAsset {
    }
 
    Computer({
-     required this.name,
-     required this.price,
-     required this.color,
+     required super.name,
+     required super.price,
+     required super.color,
      required this.makerName,
      required double weight,
    }) : _weight = weight;
