@@ -18,7 +18,7 @@ class Wizard {
     if (_name.length < 3) {
       throw Exception('마법사의 이름을 3글자 이상 작성해주세요');
     }
-    if (mp < 0) {
+    if (mp <= 0) {
       throw Exception('Exception 마법사의 MP는 0 이상이어야 합니다.');
     }
   }
@@ -34,7 +34,7 @@ class Wizard {
 
 void main() {
   Wand wand = Wand(name: '응원봉', power: 50.0);
-  Wizard wizard = Wizard(name: '카리나', hp: 50, mp: 100, wand: wand);
+  Wizard wizard = Wizard(name: '카리나', hp: 50, mp: 2, wand: wand);
 
   wizard.damage(1000);
 
