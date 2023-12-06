@@ -1,0 +1,36 @@
+      @startuml starcraft
+
+interface Terran
+interface Zerg {
+    void auto heal
+}
+interface Protoss {
+    void shield
+}
+interface Bionic extends Unit
+interface Mechanic extends Unit
+
+abstract class Star
+abstract class Unit implements Star
+abstract class Structure implements Star
+
+class Marine extends Bionic implements Terran
+class Medic extends Bionic implements Terran {
+    void heal
+}
+class Tank extends Mechanic implements Terran
+class Vulture extends Mechanic implements Terran
+class Scv extends Mechanic implements Terran, Bionic {
+    void resourceextraction
+}
+class TerranStructure extends Terran, Structure
+
+
+class ZergUnit extends Bionic implements Zerg 
+class ZergStructure extends Structure implements Zerg, Bionic
+
+class Zealot extends Bionic implements Protoss
+class Dragun extends Mechanic implements Protoss
+class ProtossStructure extends Protoss, Structure
+
+@enduml

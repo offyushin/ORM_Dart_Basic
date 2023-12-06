@@ -34,22 +34,20 @@ class B extends Y implements X {
   }
 }
 
-abstract interface class X {
-  void a();
-}
-
 abstract interface class Y implements X {
   void b();
 }
 
-void main (List<String> cup) {
-  final x = <Y> [];
+abstract interface class X {
+  void a();
+}
+
+void main(List<String> cup) {
+  final x = <Y>[];
   x.add(A());
   x.add(B());
 
   x.forEach((x) {
     x.b();
   });
-
 }
-

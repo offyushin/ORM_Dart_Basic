@@ -1,0 +1,2 @@
+interface class Terran {}
+
