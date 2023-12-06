@@ -1,4 +1,0 @@
-interface class Protoss {
-
-}
-
