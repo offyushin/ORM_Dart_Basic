@@ -43,11 +43,11 @@ abstract interface class X {
 }
 
 void main(List<String> cup) {
-  final x = <Y>[];
-  x.add(A());
-  x.add(B());
+  final y = <Y>[];
+  y.add(A());
+  y.add(B());
 
-  x.forEach((x) {
-    x.b();
+  y.forEach((y) {
+    y.b();
   });
 }
