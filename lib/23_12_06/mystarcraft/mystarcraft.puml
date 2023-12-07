@@ -6,9 +6,10 @@ abstract Zerg extends Unit implements Recovery
 abstract Terran extends Unit
 abstract Protoss extends Unit implements Shield
 abstract Unit extends Star
-interface TerranStructure extends Terran
-interface ZergStructure extends Zerg
-interface ProtossStructure extends Protoss
+abstract Structure extends Star
+interface TerranStructure extends Terran implements Structure
+interface ZergStructure extends Zerg implements Structure
+interface ProtossStructure extends Protoss implements Structure
 interface Bionic
 interface Mechanic
 interface Recovery
