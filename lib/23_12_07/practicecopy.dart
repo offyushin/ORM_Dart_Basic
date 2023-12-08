@@ -1,6 +1,6 @@
 class Book {
   String title;
-  DateTime publishDate;
+  DateTime publishDate = DateTime.now();
   String comment;
 
   Book({
