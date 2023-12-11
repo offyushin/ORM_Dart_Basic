@@ -35,10 +35,14 @@ void main() {
 
   final employee2 = Employee('동길홍', 14);
   final depart2 = Department('총무부', employee2);
+
+  final employee3 = Employee('카리나', 24);
+  final depart3 = Department('총무부', employee3);
   
   File file = File('lib/23_12_11/practice_data_7_1/company.txt');
   file.writeAsStringSync(jsonEncode(depart.toJson()));
   file.writeAsStringSync(jsonEncode(depart2.toJson()), mode: FileMode.append);
+  file.writeAsStringSync(jsonEncode(depart3.toJson()), mode: FileMode.append);
 
 
 
