@@ -27,8 +27,8 @@ class Book {
       other is Book &&
           runtimeType == other.runtimeType &&
           title == other.title &&
-          publishDate.isAtSameMomentAs(other.publishDate);
-
+          publishDate ==other.publishDate;
+// 수정해야함
   @override
   int get hashCode => title.hashCode ^ publishDate.hashCode;
 }
