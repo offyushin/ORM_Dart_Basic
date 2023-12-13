@@ -15,7 +15,7 @@ Future<String> getMovieInfo() async {
 }
 
 void main() async {
-  print('dadsf');
+  // print('dadsf');
   String movieinfo = await getMovieInfo();
   Map<String, dynamic> movieMap = jsonDecode(movieinfo);
   // movieMap.forEach((key, value) {
