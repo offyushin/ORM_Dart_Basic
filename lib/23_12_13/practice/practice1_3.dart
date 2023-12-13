@@ -4,6 +4,6 @@ Future<String> timeoutFutre() async {
 }
 
 void main() async {
-  String out = await timeoutFutre().timeout(Duration(seconds: 5), onTimeout: () => 'timeout');
+  String out = await timeoutFutre().timeout(Duration(seconds: 5), onTimeout: () => '시간초과 ㅋㅋ');
   print(out);
 }
