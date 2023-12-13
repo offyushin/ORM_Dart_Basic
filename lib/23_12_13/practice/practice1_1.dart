@@ -18,5 +18,6 @@ void copy(String source, String target) async {
     }
   } catch (e) {
     print('파일을 찾을 수 없습니다');
+    // 샘플 파일을 만들어야 오류가 안납니다!..
   }
 }
