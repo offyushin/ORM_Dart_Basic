@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 
 Future<Uint8List> downloadImage(String url) async {
+  // return http.readBytes(Uri.parse('https://alimipro.com/favicon.ico'));  이것도 가능함 ㄷㄷ;
 final response = await http.get(Uri.parse('https://alimipro.com/favicon.ico'));
 return response.bodyBytes;
 }
