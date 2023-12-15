@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 
 Future<Uint8List> downloadImage(String url) async {
-  // return http.readBytes(Uri.parse('https://alimipro.com/favicon.ico'));  이것도 가능함 ㄷㄷ;
+  // return http.readBytes(Uri.parse('https://alimipro.com/favicon.ico'));  이것도 가능함 ㄷㄷ; 참고 statusCode 를 못구함
 final response = await http.get(Uri.parse('https://alimipro.com/favicon.ico'));
 return response.bodyBytes;
 }
@@ -22,7 +22,7 @@ void main() async {
   stopwatch.stop();
   print('다운로드 끝');
   print('=============');
-  print(stopwatch.elapsed);
-  print('${down.length} 용량..?');
+  print('소요시간 : ${stopwatch.elapsed}');
+  print('용량 : ${down.length} bytes');
 }
 
