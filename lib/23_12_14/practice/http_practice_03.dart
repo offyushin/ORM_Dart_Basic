@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:http/http.dart' as http;
@@ -21,12 +22,6 @@ void main() async {
   print('다운로드 끝');
   print('=============');
   print(stopwatch.elapsed);
+  print('${down.length} 용량..?');
 }
 
-// Stopwatch stopwatch = Stopwatch()..start();
-// await Future.delayed(Duration(seconds: num));
-// print('요청한 $num 작업 완료! : ${stopwatch.elapsed}');
-// }
-// argument, parameter
-// parameter  : 함수에 정의 된 아이 = 형식 매개 변수
-// argument : 파라미터에 들어갈 값 = 함수를 호출할 때 이 때 사용하게 되는 일련의 값들을 아규먼트라고 부른다.
