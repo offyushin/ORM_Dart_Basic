@@ -13,7 +13,7 @@ class Store {
   int type;
 
 
-  factory Store.fromJson(Map<String, dynamic> json) => _$StoreFromJson(json);
+
 
   Map<String, dynamic> toJson() => _$StoreToJson(this);
 
@@ -63,23 +63,6 @@ class Store {
     );
   }
 
-  Map<String, dynamic> toMap() {
-    return {
-      'name': this.name,
-      'address': this.address,
-      'stock': this.stock,
-      'type': this.type,
-    };
-  }
-
-  factory Store.fromMap(Map<String, dynamic> map) {
-    return Store(
-      name: map['name'] as String,
-      address: map['address'] as String,
-      stock: map['stock'] as String,
-      type: map['type'] as int,
-    );
-  }
 
 //</editor-fold>
 }
