@@ -1,8 +1,3 @@
-bool isEven(int num) {
-  return num.isEven;
+bool isEven(int num) => num.isEven;
 
-}
-
-void main() {
-  isEven(4);
-}
+void main() => isEven(4);

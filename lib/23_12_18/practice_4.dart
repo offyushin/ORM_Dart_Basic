@@ -3,6 +3,4 @@ String reverseString(String string) {
   return reversStr;
 }
 
-void main() {
-  reverseString('hello');
-}
+void main() => reverseString('hello');
